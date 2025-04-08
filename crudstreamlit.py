@@ -5,7 +5,7 @@ st.title("🧠 In-Memory CRUD App (No DB, NumPy Only)")
 
 # Initialize session state
 if "data" not in st.session_state:
-    st.session_state.data = np.empty((0, 2), dtype=object)  # Each row: [name, email]
+    st.session_state.data = np.array([["Alice", "alice@example.com"]], dtype=object)
 
 menu = ["Create", "Read", "Update", "Delete"]
 choice = st.sidebar.selectbox("Action", menu)
